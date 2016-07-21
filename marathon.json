@@ -1,0 +1,36 @@
+{
+  "id": "/mypetclinic",
+  "cmd": null,
+  "cpus": 1,
+  "mem": 1000,
+  "disk": 0,
+  "instances": 0,
+  "acceptedResourceRoles": [
+    "slave_public"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "dockerniu/petclinic",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 0,
+          "servicePort": 10010,
+          "protocol": "tcp",
+          "labels": {}
+        }
+      ],
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": true
+    }
+  },
+  "labels": {
+    "HAPROXY_GROUP": "external",
+    "HAPROXY_0_VHOST": "devopsoneagents.eastus.cloudapp.azure.com",
+    "HAPROXY_0_MODE": "http"
+  }
+}
