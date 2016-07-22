@@ -22,7 +22,8 @@
           "protocol": "tcp",
           "labels": {}
         }
-      ]
+      ],
+      "forcePullImage": true
     }
   },
   "healthChecks": [
