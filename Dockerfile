@@ -48,12 +48,13 @@ RUN rm -rf ${TOMCAT_HOME}/webapps/docs ${TOMCAT_HOME}/webapps/examples
 RUN apt-get clean
 
 # Pull project
-RUN mkdir -p /home/spring-petclinic
-RUN (git clone https://github.com/alanniu99/spring-petclinic.git /home/spring-petclinic  && \
-	 cd /home/spring-petclinic && \
-	 mvn package && \
-	 cp target/petclinic.war ${TOMCAT_HOME}/webapps/ && \
-	 rm -rf /home/spring-petclinic)
+#RUN mkdir -p /home/spring-petclinic
+#RUN (git clone https://github.com/alanniu99/spring-petclinic.git /home/spring-petclinic  && \
+#	 cd /home/spring-petclinic && \
+#	 mvn package && \
+#	 cp target/petclinic.war ${TOMCAT_HOME}/webapps/ && \
+#	 rm -rf /home/spring-petclinic)
+COPY target/petclinic.war ${TOMCAT_HOME}/webapps/
 
 EXPOSE 8080
 CMD ${TOMCAT_HOME}/bin/startup.sh && tail -f ${TOMCAT_HOME}/logs/catalina.out
