@@ -4,7 +4,7 @@
   "cpus": 1,
   "mem": 1000,
   "disk": 0,
-  "instances": 0,
+  "instances": 1,
   "acceptedResourceRoles": [
     "slave_public"
   ],
@@ -22,12 +22,21 @@
           "protocol": "tcp",
           "labels": {}
         }
-      ],
-      "privileged": false,
-      "parameters": [],
-      "forcePullImage": true
+      ]
     }
   },
+  "healthChecks": [
+    {
+      "path": "/",
+      "protocol": "HTTP",
+      "portIndex": 0,
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 120,
+      "timeoutSeconds": 20,
+      "maxConsecutiveFailures": 5,
+      "ignoreHttp1xx": false
+    }
+  ],
   "labels": {
     "HAPROXY_GROUP": "external",
     "HAPROXY_0_VHOST": "devopsoneagents.eastus.cloudapp.azure.com",

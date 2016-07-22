@@ -11,4 +11,9 @@
             <img class="img-responsive" src="${petsImage}"/>
         </div>
     </div>
+    <div class="row">
+    	<div class="col-md-12">
+    	<h3 style="color: blue;">Hello DevOps</h3>
+    	</div>
+    </div>
 </petclinic:layout>
