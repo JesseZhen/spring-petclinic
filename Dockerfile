@@ -49,11 +49,11 @@ RUN apt-get clean
 
 # Pull project
 RUN mkdir -p /home/spring-petclinic
-WORKDIR /home/spring-petclinic
-RUN (git clone https://github.com/alanniu99/spring-petclinic.git /home/spring-petclinic && git checkout master && \
-#	 cd /home/spring-petclinic && \
+RUN (git clone https://github.com/alanniu99/spring-petclinic.git /home/spring-petclinic  && \
+	 cd /home/spring-petclinic && \
 	 mvn package && \
-	 cp target/petclinic.war ${TOMCAT_HOME}/webapps/)
+	 cp target/petclinic.war ${TOMCAT_HOME}/webapps/ && \
+	 rm -rf /home/spring-petclinic)
 
 EXPOSE 8080
 CMD ${TOMCAT_HOME}/bin/startup.sh && tail -f ${TOMCAT_HOME}/logs/catalina.out
