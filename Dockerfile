@@ -49,7 +49,7 @@ RUN apt-get clean
 
 # Pull project
 #RUN mkdir -p /home/spring-petclinic
-#RUN (git clone https://github.com/alanniu99/spring-petclinic.git /home/spring-petclinic  && \
+#RUN (git clone https://github.com/jayong1993/spring-petclinic.git /home/spring-petclinic  && \
 #	 cd /home/spring-petclinic && \
 #	 mvn package && \
 #	 cp target/petclinic.war ${TOMCAT_HOME}/webapps/ && \
