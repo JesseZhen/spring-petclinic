@@ -1,5 +1,5 @@
 {
-  "id": "/mypetclinic",
+  "id": "petclinic",
   "cmd": null,
   "cpus": 0.4,
   "mem": 1000,
