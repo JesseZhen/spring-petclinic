@@ -17,7 +17,7 @@
       "portMappings": [
         {
           "containerPort": 8080,
-          "hostPort": 0,
+          "hostPort": 8082
           "servicePort": 10010,
           "protocol": "tcp",
           "labels": {}
