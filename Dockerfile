@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Alan Niu <wei-feng.niu@hpe.com>
+MAINTAINER Jia Yong <jayong.zhang@gmail.com>
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV MAVEN_HOME /opt/maven
