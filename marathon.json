@@ -40,7 +40,7 @@
   ],
   "labels": {
     "HAPROXY_GROUP": "external",
-    "HAPROXY_0_VHOST": "devopsoneagents.eastus.cloudapp.azure.com",
+    "HAPROXY_0_VHOST": "acsyongagents.centralus.cloudapp.azure.com",
     "HAPROXY_0_MODE": "http"
   }
 }
