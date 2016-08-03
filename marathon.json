@@ -12,7 +12,7 @@
     "type": "DOCKER",
     "volumes": [],
     "docker": {
-      "image": "lane/petclinic:latest",
+      "image": "lane/mypetclinicc:latest",
       "network": "BRIDGE",
       "portMappings": [
         {
