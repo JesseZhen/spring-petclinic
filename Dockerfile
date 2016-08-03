@@ -54,7 +54,7 @@ RUN (git clone https://github.com/jayong1993/spring-petclinic.git /home/spring-p
 	 mvn package && \
 	 cp target/petclinic.war ${TOMCAT_HOME}/webapps/ && \
 	 rm -rf /home/spring-petclinic)
-COPY target/petclinic.war ${TOMCAT_HOME}/webapps/
+#COPY target/petclinic.war ${TOMCAT_HOME}/webapps/
 
 EXPOSE 8080
 CMD ${TOMCAT_HOME}/bin/startup.sh && tail -f ${TOMCAT_HOME}/logs/catalina.out
