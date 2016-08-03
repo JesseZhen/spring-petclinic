@@ -1,8 +1,8 @@
 {
   "id": "petclinic",
   "cmd": null,
-  "cpus": 0.4,
-  "mem": 1000,
+  "cpus": 0.6,
+  "mem": 600,
   "disk": 0,
   "instances": 1,
   "acceptedResourceRoles": [
@@ -22,8 +22,7 @@
           "protocol": "tcp",
           "labels": {}
         }
-      ],
-      "forcePullImage": true
+      ]
     }
   },
   "healthChecks": [
