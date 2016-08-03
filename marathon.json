@@ -1,5 +1,5 @@
 {
-  "id": "petclinic",
+  "id": "/petclinic",
   "cmd": null,
   "cpus": 0.6,
   "mem": 600,
@@ -22,28 +22,18 @@
           "protocol": "tcp",
           "labels": {}
         }
-      ]
+      ],
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": false
     }
   },
-  "healthChecks": [
-    {
-      "path": "/",
-      "protocol": "HTTP",
-      "portIndex": 0,
-      "gracePeriodSeconds": 300,
-      "intervalSeconds": 120,
-      "timeoutSeconds": 20,
-      "maxConsecutiveFailures": 5,
-      "ignoreHttp1xx": false
-    }
-  ],
   "labels": {
     "HAPROXY_GROUP": "external",
     "HAPROXY_0_VHOST": "acsyongagents.centralus.cloudapp.azure.com",
     "HAPROXY_0_MODE": "http"
   },
-  
-    "portDefinitions": [
+  "portDefinitions": [
     {
       "port": 10000,
       "protocol": "tcp",
